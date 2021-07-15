@@ -1,3 +1,9 @@
-p{
+*{
     font-family: 'SF Pro Display', sans-serif;
+    margin: 0;
+}
+.HomePrices-main{
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
 }
