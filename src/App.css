@@ -105,7 +105,10 @@ main{
     background-repeat: no-repeat;
     background-position-y:1em ;
     background-color: #111111;
+    border: hidden;
+    cursor: pointer;
 }
+
 .Home-cancel{
     height: 100%;
     width: 33.3%;
@@ -115,22 +118,38 @@ main{
     background-repeat: no-repeat;
     background-position-y:1em ;
     background-color: #111111;
+    border: hidden;
+    cursor: pointer;
 }
-.Home-cancel,
-.Home-prices, 
-.Home-watch h1{
+
+.Home-watch{
+    height: 100%;
+    width: 33.3%;
+    background-image: url('./images/dispositivos copia.png');
+    background-position-x: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-y:1em ;
+    background-color: #111111;
+    border: hidden;
+    cursor: pointer;
+}
+.Home-cancel h1{
     margin: 0;
     padding-top: 4em;
     color: #595959;
     font-weight: 300;
 }
-.Home-watch{
-    height: 100%;
-    width: 33.3%;
-    background-image: url('./images/NO copia.png');
-    background-position-x: center;
-    background-size: 25%;
-    background-repeat: no-repeat;
-    background-position-y:1em ;
-    background-color: #111111;
+.Home-prices h1{
+    margin: 0;
+    padding-top: 4em;
+    color: #595959;
+    font-weight: 300;
+}
+.Home-watch h1{
+    margin: 0;
+    padding-top: 4em;
+    color: #595959;
+    font-weight: 300;
+    
 }

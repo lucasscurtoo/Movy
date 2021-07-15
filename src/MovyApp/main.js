@@ -1,10 +1,20 @@
 import '../App.css';
-import React from 'react';
+import React, { useState }from 'react';
 import HomePrices from './homePrice'
 
 
+
 function Main(){
+    const [variable, setVariable] = useState('');
+    function verificar(){
+        if (variable == 'price') {
+            return(
+           <HomePrices/>    
+            )
+         }
+    }
     return(
+        
          <>
         <main>
       <header className="Main-header">
@@ -24,14 +34,17 @@ function Main(){
          </div>
      </main>
         <div className="Main-interfaces">
-            <button className="Home-prices">
-            <h1>Precio</h1>
+            <button className="Home-prices" onClick={() => {setVariable('price')}}>
+                <h1>Precio</h1>
             </button>
             <button className="Home-cancel">
                 <h1>Cancelar</h1>
             </button>
-            <button className="Home-watch"></button>
+            <button className="Home-watch">
+                <h1>Dispositivos</h1>
+            </button>
          </div>
+         {verificar()}
          </>
     )
 }
