@@ -1,16 +1,22 @@
 import '../App.css';
 import React, { useState }from 'react';
 import HomePrices from './homePrice'
+import HomeCancel from './homeCancel';
 
 
 
 function Main(){
-    const [variable, setVariable] = useState('');
+    let [variable, setVariable] = useState('price');
     function verificar(){
         if (variable == 'price') {
             return(
            <HomePrices/>    
             )
+         }
+         if (variable == 'cancel') {
+             return(
+                 <HomeCancel/>
+             )
          }
     }
     return(
@@ -37,7 +43,7 @@ function Main(){
             <button className="Home-prices" onClick={() => {setVariable('price')}}>
                 <h1>Precio</h1>
             </button>
-            <button className="Home-cancel">
+            <button className="Home-cancel" onClick={() =>{setVariable('cancel')}}>
                 <h1>Cancelar</h1>
             </button>
             <button className="Home-watch">
