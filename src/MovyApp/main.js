@@ -2,6 +2,7 @@ import '../App.css';
 import React, { useState }from 'react';
 import HomePrices from './homePrice'
 import HomeCancel from './homeCancel';
+import HomeWatch from './homeWatch';
 
 
 
@@ -16,6 +17,11 @@ function Main(){
          if (variable == 'cancel') {
              return(
                  <HomeCancel/>
+             )
+         }
+         if (variable == 'watch') {
+             return(
+                 <HomeWatch/>
              )
          }
     }
@@ -46,7 +52,7 @@ function Main(){
             <button className="Home-cancel" onClick={() =>{setVariable('cancel')}}>
                 <h1>Cancelar</h1>
             </button>
-            <button className="Home-watch">
+            <button className="Home-watch" onClick={()=>{setVariable('watch')}}>
                 <h1>Dispositivos</h1>
             </button>
          </div>

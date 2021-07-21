@@ -1,8 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import { render } from '@testing-library/react';
-import { getAllMovies } from './api/movies';
+import React from 'react';
+// import React, { useState, useEffect } from 'react';
+// import { render } from '@testing-library/react';
+// import { getAllMovies } from './api/movies';
 import './MovyApp/main.js';
 import Main from './MovyApp/main';
 
