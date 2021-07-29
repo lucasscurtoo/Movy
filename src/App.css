@@ -9,11 +9,12 @@ main{
     background-image: url('./images/Bitmap.png');
     width: 100vw;
     height: 100vh;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
 }
-.Main-header{
+header{
     width: 100%;
     height: 15%;
     align-items: center;
@@ -27,22 +28,13 @@ main{
  display: flex;
  
 }
-.Main-header-logo p{
-    margin: 0;
-    font-weight: bold;
-    font-size: x-large;
-    padding-left: 15%;
-    color: #fff;
-    font-family: 'Exo', sans-serif;;
+.Main-header-logo img{
+    margin-left: 2vw;
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
 }
- #Logo-oval{
-    border-radius: 50px;
-    border: 3px solid #06BCF1;
-    padding: 0;
-    position: relative;
-    right: 1.5%;
-    bottom:10%;
-}
+
 .Main-header-in{
  width: 50%;
  height: 100%;
@@ -54,13 +46,13 @@ main{
     color: #fff;
     text-decoration: none;
     padding-right: 10%;
-    font-size:large;
+    font-size:1vw;
 }
 .Main-header-in #Log-in{
-    padding: 0.3em 2em;
+    padding: 0.5vh 2vw;
     background-color: #0578FF;
-    border-radius: 2px;
-    margin-right: 1em;
+    border-radius: 5px;
+    margin-right: 1.5vw;
 }
 .Main-text{
     width: 100%;
@@ -70,40 +62,40 @@ main{
     align-items:center;
     
 }
+
 .Main-text h1{
-    padding-top: 2em;
-    margin: 0;
+    margin-top: 20vh;
     color: #fff;
-    font-size: 5em;
+    font-size: 5vw;
 }
 .Main-text p{
     color: #fff;
-    font-size: 1.4em;
-    font-weight: 500;
+    font-size: 1.3vw;
+    font-weight: 600;
 }
-.Main-text a{
+#try-now{
     color: #fff;
-    margin-top: 4em;
-    font-size: large;
-    padding: 3px 20px;
+    margin-top: 10vh;
+    font-size: 1.2vw;
+    padding: 1vh 3vw;
     background-color: #0578FF;
-    border-radius: 2px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 .Main-interfaces{
     background-color: #000;
     width: 100vw;
     height: 30vh;
     display: flex;
-    
 }
 .Home-prices{
     height: 100%;
     width: 33.3%;
-    background-image: url('./images/price copia.png');
+    background-image: url('./images/Price-black.png');
     background-position-x: center;
     background-size: 25%;
     background-repeat: no-repeat;
-    background-position-y:1em ;
+    background-position-y:2vh ;
     background-color: #111111;
     border: hidden;
     cursor: pointer;
@@ -112,11 +104,11 @@ main{
 .Home-cancel{
     height: 100%;
     width: 33.3%;
-    background-image: url('./images/NO copia.png');
+    background-image: url('./images/Cancel-black.png');
     background-position-x: center;
     background-size: 25%;
     background-repeat: no-repeat;
-    background-position-y:1em ;
+    background-position-y:2vh ;
     background-color: #111111;
     border: hidden;
     cursor: pointer;
@@ -125,11 +117,11 @@ main{
 .Home-watch{
     height: 100%;
     width: 33.3%;
-    background-image: url('./images/dispositivos copia.png');
+    background-image: url('./images/Watch-black.png');
     background-position-x: center;
-    background-size: 50%;
+    background-size: 25%;
     background-repeat: no-repeat;
-    background-position-y:1em ;
+    background-position-y:2vh ;
     background-color: #111111;
     border: hidden;
     cursor: pointer;

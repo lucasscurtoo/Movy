@@ -8,7 +8,7 @@ function HomeCancel() {
             <div className="HomeCancel-text">
                 <p>Si piensas que Movy no es lo tuyo, no hay <br/> problema. Sin compromisos. <br/>Cancela
                     online cuando quieras.</p>
-                <a id="enjoyFreeMonth">DISFRUTAR UN MES GRATIS</a>
+                <a id="enjoyFreeMonthCancel">DISFRUTAR UN MES GRATIS</a>
             </div>
             <div className="HomeCancel-img">
                 <img src={Movydis}></img>

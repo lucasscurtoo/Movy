@@ -4,7 +4,7 @@
 }
 .homeWatch-main{
     width: 100vw;
-    height: 90vh;
+    min-height: 100vh;
     background-color: #000;
 }
 .homeWatch-text{
@@ -13,15 +13,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 2vw;
 }
 .homeWatch-text p{
-    font-size: xx-large;
+    font-size: 2vw;
     color: #fff;
+    margin-right: 2vw;
 }
 #enjoyFreeMonth{
-    margin: 0 0 0 4em;
-    padding: 0.4em 2em;
-    font-size: x-large;
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
     background-color: #0578FF;
     border-radius: 10px;
     width: fit-content;
@@ -34,7 +35,7 @@
     justify-content: center;
 }
 .homeWatch-devices-card{
-    width: 25%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -49,9 +50,9 @@
 .homeWatch-devices-card h1{
     margin: 1em 0;
     color: #fff;
-    font-size: x-large;
+    font-size: 2vw;
 }
 .homeWatch-devices-card p{
     color: #fff;
-    font-size: large;
+    font-size: 1.5vw;
 }

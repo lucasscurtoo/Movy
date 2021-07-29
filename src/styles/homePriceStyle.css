@@ -24,7 +24,8 @@
 
 .choose-text a {
     text-decoration: none;
-    padding: 0.8em 3em;
+    padding: 1.5vh 2.5vw;
+    font-size: 1.1vw;
     background-color: #0578FF;
     border-radius: 4px;
     color: #fff;
@@ -37,58 +38,76 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+ 
 }
 
 .choose-box-container {
     width: 90%;
     height: 80%;
     display: flex;
-    background-color: lightgray;
+    flex-direction: column;
+   
 }
 
 .choose-box-text-features {
+    width: 100%;
+    min-height: 10%;
+  
+    color: #fff;
+    display: flex;
+}
+.text-features-monthly p{
+    padding-left: 1vw;
+    font-size: 1.3vw;
+}
+.text-features-monthly{
     width: 60%;
     height: 100%;
-    color: #fff;
+    background-color: #000;
 }
-.choose-box-text-features p{
-    padding:0.5em 1em ;
-}
-td{
-    display: block;
-    padding: 1em 1em 0 1em;
-width: 100%;
-}
-tr{
-    width: 80%;
-}
-.choose-box-text-plans-container {
+.text-features-prices-container{
     width: 40%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    padding: 0.5em 0;
-    background-color: lightgreen;
 }
-.choose-box-text-plans {
+.text-features-prices{
     width: 33.3%;
-    margin: 0;
-    text-align: center;
-    color: #fff;
-}
-.choose-box-text-plans table{
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+.text-features-prices h1{
+    font-size: 1.5vw;
+}
+.text-features-prices p{
+    padding-top: 1vh;
+}
+.choose-box-table{
     width: 100%;
-    margin:0;
+    height: 90%;
+    color: #fff;
+    font-size: 1.2vw;
+   
+}
+.choose-box-table td:first-child{
+    padding-right:38vw;
+    padding-left: 1vw;
+}
+.choose-box-table td{
+    padding:1vh 6vw 1vh 5vw;
+    border:none;
+    margin: 0;
+}
+.choose-box-table table{
+    border-spacing: 0;
+    width: 100%;
+}
+tr{
+    margin: 0;
+    padding: 0;
 }
 .gray{
-    background-color: #2222;
-}
-.choose-box-text-plans h1{
-    font-size: medium;
-    padding-bottom: 4%;
+    background-color: #222222;
 }
 
