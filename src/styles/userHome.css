@@ -1,0 +1,9 @@
+
+#info section img{
+    object-fit: contain;
+    width: 2vw;
+}
+
+.minutes-color{
+    background-color: #FF0C6C;
+}
