@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 .carousel-img {
+=======
+
+.carousel-img{
+>>>>>>> 55030bc (adding home, movies and promises to the API)
     width: fit-content;
     height: fit-content;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 }
 
 .movie {
@@ -12,17 +18,35 @@
 }
 
 .movie img {
+=======
+    
+   
+    
+}
+.movie{
+    width: 12vw;
+    height: 90%;
+    margin-left: 1vw;
+   
+}
+.movie img{
+>>>>>>> 55030bc (adding home, movies and promises to the API)
     width: 100%;
     height: auto;
     object-fit: cover;
 }
+<<<<<<< HEAD
 
 .carousel-box {
+=======
+.carousel-box{
+>>>>>>> 55030bc (adding home, movies and promises to the API)
     overflow: scroll;
     scroll-behavior: smooth;
     color: #fff;
     background-color: #000;
     padding-top: 5vh;
+<<<<<<< HEAD
 }
 
 .carousel-box h1 {
@@ -32,5 +56,17 @@
 }
 
 .carousel-box::-webkit-scrollbar {
+=======
+
+}
+.carousel-box h1{
+    font-size: 2vw;
+    position: sticky;
+    left: 0px;
+
+
+}
+.carousel-box::-webkit-scrollbar{
+>>>>>>> 55030bc (adding home, movies and promises to the API)
     display: none;
 }

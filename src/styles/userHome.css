@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -8,4 +9,78 @@
 
 .minutes-color{
     background-color: #FF0C6C;
+=======
+*{
+    margin: 0;
+    font-family: 'SF Pro Display', sans-serif;
+}
+.home-main{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-origin: content-box;
+
+}
+.home-navbar{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    
+}
+.home-navbar img{
+    margin-left: 6vw;
+    width: 25%;
+    height: 40%;
+    object-fit: contain;
+}
+.home-navbar-links{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}   
+.home-navbar-profile{
+    margin-left: auto;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #fff;
+    
+}    
+.home-main-info{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}                             
+#date-genre{
+    width: 100%;
+    height: 10%;
+    
+    font-size: 2vw;
+}
+#info{
+    width: 100%;
+    height: 40%;
+  
+}
+#info h1{
+    font-size: 3vw;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px #8888;
+}
+#info p{
+    font-size: 1.3vw;
+    color: #fff;
+    margin-right: 20vw;
+>>>>>>> 55030bc (adding home, movies and promises to the API)
 }
