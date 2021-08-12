@@ -1,0 +1,39 @@
+
+.carousel-img{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    
+   
+    
+}
+.movie{
+    width: 12vw;
+    height: 90%;
+    margin-left: 1vw;
+   
+}
+.movie img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.carousel-box{
+    overflow: scroll;
+    scroll-behavior: smooth;
+    color: #fff;
+    background-color: #000;
+    padding-top: 5vh;
+
+}
+.carousel-box h1{
+    font-size: 2vw;
+    position: sticky;
+    left: 0px;
+
+
+}
+.carousel-box::-webkit-scrollbar{
+    display: none;
+}
