@@ -6,7 +6,7 @@
 .minutes-color{
     background-color: #FF0C6C;
 }
-<<<<<<< HEAD
+
 .home-main{
     width: 100vw;
    min-height: 100vh;
@@ -105,5 +105,3 @@
     object-fit: contain;
     width: 2vw;
 }
-=======
->>>>>>> 294eaf0 (adding home, movies and promises to the API)

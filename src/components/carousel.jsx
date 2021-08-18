@@ -18,3 +18,4 @@ Carousel.propTypes = {
     name: PropTypes.string,
 };
 export default Carousel;
+
