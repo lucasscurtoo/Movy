@@ -1,4 +1,3 @@
-import '../App.css';
 import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
 import HomePrices from '../components/homePrice'
@@ -6,6 +5,7 @@ import HomeCancel from '../components/homeCancel';
 import HomeWatch from '../components/homeWatch';
 import Footer from '../components/footer';
 import Header from '../components/header'
+import '../App.css';
 
 function Main(){
     let [homeState, setHomeState] = useState('price');

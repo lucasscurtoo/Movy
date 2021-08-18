@@ -1,8 +1,5 @@
-/* eslint-disable no-undef */
-
 const API_KEY = '35ae0ab849a7893db02cf33f003e017f';
 const BASE_URL = 'https://api.themoviedb.org/3';
-
 
 export const getPopularMovies = () => {
   return fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`)
@@ -21,9 +18,12 @@ export const getNowPlayingMovies = () => {
 
 export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500/';
 
-
-
-export const getMovieDetails = () => {
-    return fetch(`${BASE_URL}/movie/385128?api_key=${API_KEY}`)
+export const getMoviesImages = () => {
+    return fetch(`${BASE_URL}/movie/637649/images`)
     .then((response) => response.json())
+}
+
+export const getMovieDetails = (numero) => {   
+  return fetch(`${BASE_URL}/movie/${numero}?api_key=${API_KEY}`)
+  .then((response) => response.json())
 }

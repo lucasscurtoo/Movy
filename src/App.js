@@ -1,11 +1,11 @@
 
-import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Main from './pages/main';
 import LogIn from './pages/logIn';
 import UserHome from './pages/userHome'
+import './App.css';
 
 function Movy(){
   return(

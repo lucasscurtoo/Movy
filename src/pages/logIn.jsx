@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Footer from '../components/footer'
 import Header from '../components/header'
-import '../styles/login.css'
 import FacebookIcon from '../images/facebook-icon.png'
+import '../styles/login.css'
 
 function logIn() {
     return ( 

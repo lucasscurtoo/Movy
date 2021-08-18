@@ -1,25 +1,24 @@
-
-.carousel-img{
+.carousel-img {
     width: fit-content;
     height: fit-content;
     display: flex;
     align-items: center;
-    
-   
-    
 }
-.movie{
+
+.movie {
     width: 12vw;
     height: 90%;
     margin-left: 1vw;
-   
+
 }
-.movie img{
+
+.movie img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
-.carousel-box{
+
+.carousel-box {
     overflow: scroll;
     scroll-behavior: smooth;
     color: #fff;
@@ -27,13 +26,13 @@
     padding-top: 5vh;
 
 }
-.carousel-box h1{
+
+.carousel-box h1 {
     font-size: 2vw;
     position: sticky;
     left: 0px;
-
-
 }
-.carousel-box::-webkit-scrollbar{
+
+.carousel-box::-webkit-scrollbar {
     display: none;
 }

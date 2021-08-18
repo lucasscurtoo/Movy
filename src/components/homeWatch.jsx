@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/homeWatch.css'
 import Movydis from '../images/movy-dis.png'
 import MovyTv from '../images/movy-tv.png'
 import MovyTablet from '../images/movy-tablet.png'
+import '../styles/homeWatch.css'
 
 function HomeWatch() {
     return (

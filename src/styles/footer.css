@@ -1,8 +1,5 @@
-*{
-    margin: 0;
-    font-family: 'SF Pro Display', sans-serif;
-}
-footer{
+
+footer {
     width: 100vw;
     min-height: 40vh;
     display: flex;
@@ -10,28 +7,33 @@ footer{
     align-items: center;
     background-color: #000;
 }
-.footer-text{
+
+.footer-text {
     width: 80%;
     height: 20%;
     display: flex;
     align-items: center;
     padding-top: 2zvw;
 }
-.footer-text p{
+
+.footer-text p {
     font-size: x-large;
     color: #fff;
 }
-.footer-table{
+
+.footer-table {
     width: 80%;
     height: 80%;
     font-size: 100%;
     color: #fff;
-    font-weight:lighter;
+    font-weight: lighter;
 }
-.footer-table table{
+
+.footer-table table {
     width: 100%;
 }
-.footer-table td{
+
+.footer-table td {
     padding-top: 2vh;
     padding-right: 5vw;
 }
