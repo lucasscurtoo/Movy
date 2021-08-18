@@ -10,7 +10,7 @@ const Carousel = ({data, name}) => {
 
             <div className="carousel-img">
                 {data
-                    ?.map((movie) => <Movie key={data} data={movie}/>)}
+                    ?.map((movie) => <Movie key={data.id} data={movie}/>)}
             </div>
 
         </div>
