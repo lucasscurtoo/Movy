@@ -7,8 +7,9 @@ import '../styles/carouselStyles.css';
 
 const Movie = ({ data }) => {
   return (
-    <div className="movie" >
+    <div className="movie">
        <img src={`${IMAGE_URL}${data?.poster_path}`} />
+       
       </div>
     )
   }
