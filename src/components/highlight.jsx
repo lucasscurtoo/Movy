@@ -6,27 +6,22 @@ import { getMovieDetails, IMAGE_URL } from '../api/movies';
 const Highlight = ({
     movie
 }) => {
-    const [movieDetails, setMovieDetails] = useState([]);
+    const [movieDetails, setMovieDetails] = useState(null);
 
     useEffect(() => {
-        console.log(movie);
+        setMovieDetails(null);
         getMovieDetails(movie.id)
             .then((response) => {
-                if(!response?.success) {
-                    setMovieDetails(null);
-                } else {
-                    setMovieDetails(response);
-                }
-                console.log("response: ", response);
+                setMovieDetails(response);
             });
-    }, [movie]);
+    }, []);
 
     return (
         <div className="home-main" style={{ backgroundImage: `url(${IMAGE_URL}${movieDetails?.backdrop_path})` }}>
             <Navbar/>
             <div className="home-main-info">
                 <section id="date-genre">
-                <p>{movieDetails?.genres}</p>
+                <p>{movieDetails?.genres.map((item) => `${item.name} `)}</p>
                 <p></p>
                 </section>
                 <section id="info">
