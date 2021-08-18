@@ -14,6 +14,7 @@ function Main(){
         switch (homeState) {
             case 'price':
                return <HomePrices/>
+<<<<<<< HEAD
             case 'cancel':
               return <HomeCancel/>
             case 'watch':
@@ -21,6 +22,19 @@ function Main(){
             }
         }
         
+=======
+               
+             
+            case 'cancel':
+              return <HomeCancel/>
+               
+            
+            case 'watch':
+                return <HomeWatch/>;
+          
+            }
+        }
+>>>>>>> eece3a7 (push)
     return(
          <>
             <main>
