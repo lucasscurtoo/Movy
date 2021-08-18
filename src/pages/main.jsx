@@ -11,23 +11,20 @@ function Main(){
     let [homeState, setHomeState] = useState('price');
 
     function cargarSeccion(){
-        if (homeState == 'price') {
-            return(
-                <HomePrices/>    
-            )
-         }
-         if (homeState == 'cancel') {
-            return(
-                <HomeCancel/>
-            )
-         }
-         if (homeState == 'watch') {
-            return(
-                <HomeWatch/>
-            )
-         }
-    }
-
+        switch (homeState) {
+            case 'price':
+               return <HomePrices/>
+               
+             
+            case 'cancel':
+              return <HomeCancel/>
+               
+            
+            case 'watch':
+                return <HomeWatch/>;
+          
+            }
+        }
     return(
          <>
             <main>
