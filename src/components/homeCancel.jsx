@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/homeCancelStyle.css'
 import Movydis from '../images/movy-dis.png'
+import '../styles/homeCancelStyle.css'
 
 function HomeCancel() {
     return (

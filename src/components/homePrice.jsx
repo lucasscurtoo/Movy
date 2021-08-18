@@ -1,7 +1,7 @@
-import '../styles/homePriceStyle.css';
 import React from 'react';
 import cross from '../images/cross.png' 
 import tick from '../images/tick.png'
+import '../styles/homePriceStyle.css';
 
 function HomePrices() {
     return (
