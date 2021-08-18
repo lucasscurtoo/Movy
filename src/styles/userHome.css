@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -14,6 +15,9 @@
     margin: 0;
     font-family: 'SF Pro Display', sans-serif;
 }
+=======
+
+>>>>>>> 2ac6abd (subiendo los errores)
 .home-main{
     width: 100vw;
     height: 100vh;
@@ -70,7 +74,7 @@
 #info{
     width: 100%;
     height: 40%;
-  
+    
 }
 #info h1{
     font-size: 3vw;
@@ -82,5 +86,9 @@
     font-size: 1.3vw;
     color: #fff;
     margin-right: 20vw;
+<<<<<<< HEAD
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+
+>>>>>>> 2ac6abd (subiendo los errores)
 }

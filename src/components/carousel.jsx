@@ -20,3 +20,4 @@ Carousel.propTypes = {
     map: PropTypes.func
 };
 export default Carousel;
+

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  export let getRandomNumber = function (max) {
     return Math.floor(Math.random() * max );
 }
@@ -8,3 +9,8 @@
     return Math.floor(Math.random() * max );
 }
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+ export let getRandomNumber = function (max) {
+    return Math.floor(Math.random() * max );
+}
+>>>>>>> 2ac6abd (subiendo los errores)

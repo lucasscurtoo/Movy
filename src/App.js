@@ -8,14 +8,17 @@ import './App.css';
 import MoviePage from './pages/moviePage';
 =======
 
-import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Main from './pages/main';
 import LogIn from './pages/logIn';
 import UserHome from './pages/userHome'
+<<<<<<< HEAD
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+import './App.css';
+>>>>>>> 2ac6abd (subiendo los errores)
 
 function Movy(){
   return(

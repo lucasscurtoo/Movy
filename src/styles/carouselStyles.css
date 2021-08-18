@@ -1,13 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .carousel-img {
 =======
 
 .carousel-img{
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+.carousel-img {
+>>>>>>> 2ac6abd (subiendo los errores)
     width: fit-content;
     height: fit-content;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -22,25 +27,38 @@
     
    
     
+=======
+>>>>>>> 2ac6abd (subiendo los errores)
 }
-.movie{
+
+.movie {
     width: 12vw;
     height: 90%;
     margin-left: 1vw;
-   
+
 }
+<<<<<<< HEAD
 .movie img{
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+
+.movie img {
+>>>>>>> 2ac6abd (subiendo los errores)
     width: 100%;
     height: auto;
     object-fit: cover;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 .carousel-box {
 =======
 .carousel-box{
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+
+.carousel-box {
+>>>>>>> 2ac6abd (subiendo los errores)
     overflow: scroll;
     scroll-behavior: smooth;
     color: #fff;
@@ -59,14 +77,18 @@
 =======
 
 }
-.carousel-box h1{
+
+.carousel-box h1 {
     font-size: 2vw;
     position: sticky;
     left: 0px;
-
-
 }
+<<<<<<< HEAD
 .carousel-box::-webkit-scrollbar{
 >>>>>>> 55030bc (adding home, movies and promises to the API)
+=======
+
+.carousel-box::-webkit-scrollbar {
+>>>>>>> 2ac6abd (subiendo los errores)
     display: none;
 }
