@@ -11,13 +11,13 @@ function UserHome(){
     const [ popularMovies, setPopularMovies ] = useState ([]);
     const [ upcomingMovies, setUpcomingMovies] = useState ([])
     const [ nowPlayingMovies, setNowPlayingMovies] = useState ([])
-    const [ randomNumber, setRandomNumber ] = useState ([])
-    const [ backgroundMovie, setBackgroundMovie] = useState ([])
+    const [ backgroundMovie, setBackgroundMovie] = useState (null)
     
     useEffect(() => {
         getPopularMovies()
         .then((response) => {
             setPopularMovies(response.results);
+            setBackgroundMovie(response.results[getRandomNumber(popularMovies.length)])
         })
         .catch((error) => {
             console.log("Error: ", error);
@@ -43,14 +43,6 @@ function UserHome(){
             console.log("Error: ", error);
         });
     }, []);
-
-    useEffect(() => {
-        setRandomNumber(getRandomNumber(popularMovies.length))
-    },[popularMovies])
-    
-    useEffect(() =>{
-        setBackgroundMovie(popularMovies[randomNumber])
-    },[randomNumber]);
 
     return(
         <>
