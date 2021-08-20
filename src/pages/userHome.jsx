@@ -17,7 +17,7 @@ function UserHome(){
         getPopularMovies()
         .then((response) => {
             setPopularMovies(response.results);
-            setBackgroundMovie(response.results[getRandomNumber(popularMovies.length)])
+            setBackgroundMovie(response.results[getRandomNumber(response.results.length)])
         })
         .catch((error) => {
             console.log("Error: ", error);
