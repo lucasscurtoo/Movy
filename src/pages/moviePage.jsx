@@ -22,12 +22,13 @@ function MoviePage() {
         dispatch(fetchMovieSimilar(id))
         dispatch(fetchMovieVideos(id))
     }, [])
-const trailer = movieVideos[0]?.key;
-    console.log(trailer)
+     
+const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1` 
+
     return (
         <>
-            <div className="w-screen bgGray ">
-                <div className="w-screen h-screen bg-no-repeat bg-cover bg-top mr-auto" style={{ backgroundImage: `url(${IMAGE_URL}${movieDetails?.poster_path})` }}>
+            <div className="w-screen h-screen bgGray ">
+              <iframe width="100%" height="100%" src={trailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                     <div className="w-11/12 h-full mx-auto">
                         <div className="h-3/5 w-11/12 pt-2">
                             <Link to="/home">
@@ -48,7 +49,7 @@ const trailer = movieVideos[0]?.key;
                             </div>
                         </div>
                     </div>
-                </div>
+                </iframe>
                 <div className="w-screen h-60 bgGray text-white">
                     <div className="w-11/12 h-full mx-auto flex ">
                         <section className="w-3/6 mt-4">
@@ -58,12 +59,12 @@ const trailer = movieVideos[0]?.key;
                         </section>
                         <section className="w-3/6 mt-4">
                             <ul className="text-xl ">
-                                <li className="inline text-gray-400 ">Cast:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Cast:</li>
                                 <li className="inline">{movieDetails?.credits?.cast.slice(0, 3)?.map((item) => `${item.name}, `)}</li>
                                 <a href="#cast">more</a>
                             </ul>
                             <ul className="text-xl pt-6">
-                                <li className="inline text-gray-400">Genres:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Genres:</li>
                                 <li className="inline">{movieDetails?.genres?.map((item) => ` ${item.name}, `)}</li>
                                 <li className="inline"> more</li>
                             </ul>
@@ -80,27 +81,24 @@ const trailer = movieVideos[0]?.key;
                         <div className="w-11/12 h-full mx-auto  ">
                             <h1 className="text-3xl">Acerca de <strong>{movieDetails?.title}</strong></h1>
                             <ul className="text-xl mt-4" id="cast">
-                                <li className="inline text-gray-400 ">Cast:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Cast:</li>
                                 <li className="inline">{movieDetails?.credits?.cast.slice(0,6).map((item) => `${item.name}, `)}</li>
                             </ul>
                             <ul className="text-xl mt-2">
-                                <li className="inline text-gray-400 ">Crew:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Crew:</li>
                                 <li className="inline">{movieDetails?.credits?.crew.slice(0,6).map((item) => `${item.name}, `)}</li>
                             </ul>
                             <ul className="text-xl mt-2">
-                                <li className="inline text-gray-400 ">Genres:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Genres:</li>
                                 <li className="inline">{movieDetails?.genres?.map((item) => `${item.name}, `)}</li>
                             </ul>
-                        </div>
-                    </div>
-                    <div className="w-screen h-screen">
-                    {/* <video className="w-full h-full" src={Youtube_URL +trailer}></video> */}
-                        
-                    </div>
+                        </div>   
+                    </div> 
                 </div>
             </div>
 
         </>
     )
 }
+
 export default MoviePage;
