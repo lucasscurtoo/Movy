@@ -1,0 +1,57 @@
+.moviePage-box {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: flex-end;
+}
+
+.movie-play {
+    width: 90%;
+    height: 30%;
+    margin-left: auto;
+    color: #fff;
+}
+
+.movie-play h1 {
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+.movie-play button {
+    padding: 1vh 5vw;
+    background-color: #fff;
+    color: #000;
+    font-size: 2vw;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.movie-play img {
+    width: 3vw;
+    display: inline;
+}
+
+.movie-info {
+    width: 100vw;
+    height: 30vh;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    color: #fff;
+}
+
+.movie-info p {
+    font-size: 1.2vw;
+}
+
+.movie-info ul {
+    display: flex;
+}
+
+.more-like-this {
+    width: 100vw;
+    height: 50vh;
+    background-color: #000;
+}
