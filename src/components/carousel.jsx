@@ -10,6 +10,7 @@ const Carousel = ({data, name}) => {
                 {data?.map((movie) => <Movie key={data.id} data={movie}/>)} 
               </div>
         </div>
+    
     )
 };
 
