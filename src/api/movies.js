@@ -23,7 +23,9 @@ export const getMoviesImages = () => {
     .then((response) => response.json())
 }
 
-export const getMovieDetails = (numero) => {   
-  return fetch(`${BASE_URL}/movie/${numero}?api_key=${API_KEY}`)
+export const getMovieDetails = (movieId) => {   
+  return fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`)
   .then((response) => response.json())
 }
+
+
