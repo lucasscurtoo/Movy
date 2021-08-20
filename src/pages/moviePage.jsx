@@ -1,18 +1,26 @@
 import React, { useState,useEffect } from 'react'
 import { useParams } from 'react-router';
+<<<<<<< HEAD
 import { getMovieCredits, getMovieDetails,IMAGE_URL } from '../api/movies'; 
 import playImage from '../images/playImg.jpg'
 
+=======
+import { getMovieDetails,IMAGE_URL } from '../api/movies'; 
+>>>>>>> fa7577d (onclick opens a page with the movie clicked)
 import '../styles/moviePage.css'
 
 
 function MoviePage(){
     let {id} = useParams();
 
+<<<<<<< HEAD
    
 
     const [ movieRequested, setMovieRequested ] = useState(null);
     const [ movieCredits, setMovieCredits ] = useState(null);
+=======
+    const [ movieRequested, setMovieRequested ] = useState(null);
+>>>>>>> fa7577d (onclick opens a page with the movie clicked)
 
     useEffect(() => {
         getMovieDetails(id)
@@ -20,6 +28,7 @@ function MoviePage(){
             setMovieRequested(response);
         })
     }, [])
+<<<<<<< HEAD
     useEffect(() => {
         getMovieCredits(id)
         .then((response) => {
@@ -29,10 +38,14 @@ function MoviePage(){
    
     const cast = movieCredits?.cast.slice(0,3)
 
+=======
+    
+>>>>>>> fa7577d (onclick opens a page with the movie clicked)
  return(
       <>
          <div className="moviePage-box" style={{backgroundImage: `url(${IMAGE_URL}${movieRequested?.poster_path})`}}>
             <div className="movie-play">
+<<<<<<< HEAD
                 <h1 className="text-blue">{movieRequested?.title}</h1>
                 <button><img src={playImage}></img>Play</button>
             </div>
@@ -55,6 +68,13 @@ function MoviePage(){
                 </ul>   
                 
              </section>
+=======
+                <h1>{movieRequested?.title}</h1>
+            </div>
+         </div>
+         <div className="movie-info">
+
+>>>>>>> fa7577d (onclick opens a page with the movie clicked)
          </div>
          <div className="more-like-this">
 

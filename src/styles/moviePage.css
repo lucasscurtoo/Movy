@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 .moviePage-box {
+=======
+.moviePage-box{
+>>>>>>> fa7577d (onclick opens a page with the movie clicked)
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
     background-position: top;
     display: flex;
     align-items: flex-end;
@@ -51,6 +56,23 @@
 }
 
 .more-like-this {
+=======
+    background-position:top;
+    display: flex;
+    align-items: flex-end;
+}.movie-play{
+    width: 100%;
+    height: 30%;
+    color: #fff;
+    
+}
+.movie-info{
+    width: 100vw;
+    height: 30vh;
+    background-color: #000;
+}
+.more-like-this{
+>>>>>>> fa7577d (onclick opens a page with the movie clicked)
     width: 100vw;
     height: 50vh;
     background-color: #000;
