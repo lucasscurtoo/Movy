@@ -11,18 +11,17 @@ import MovieSimilarCarousel from '../components/movieSimilarCarousel';
 function MoviePage() {
     let { id } = useParams();
 
-
     const movieDetails = useSelector((state) => state.movies.movieDetails)
     const movieSimilar = useSelector(state => state.movies.movieSimilar)
     const movieVideos = useSelector(state => state.movies.movieVideos)
     const dispatch = useDispatch();
-
 
     useEffect(() => {
         dispatch(fetchMovieDetails(id))
         dispatch(fetchMovieSimilar(id))
         dispatch(fetchMovieVideos(id))
     }, [])
+
 
 const trailer = movieVideos[0]?.key;
     console.log(trailer)
@@ -101,8 +100,7 @@ const trailer = movieVideos[0]?.key;
                     </div>
                 </div>
             </div>
-
-    </>
+            </>
     )
 }
 export default MoviePage;
