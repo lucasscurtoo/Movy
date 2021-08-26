@@ -26,12 +26,11 @@ const Highlight = ({
                 </section>
                 <section id="info">
                     <h1>{movieDetails?.title}</h1>
-                    <section>
-                    <p>{Math.round(movieDetails?.runtime/60)+"h"}</p>
-                    <img src={directorsImg}></img>
-                    <h1>{movieDetails?.director}</h1>
-                    {console.log(movieDetails)}
-                    </section>
+                      <section>
+                        <p>{movieDetails?.runtime + "m"}</p>
+                        <img src={directorsImg}></img>
+                        <h1>{movieDetails?.director}</h1>
+                      </section>
                     <p>{movieDetails?.overview}</p>
                 </section>
             </div>

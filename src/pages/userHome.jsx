@@ -6,7 +6,6 @@ import Footer from '../components/footer';
 import { getRandomNumber } from '../utilities/functions';
 import '../styles/userHome.css'
 
-
 function UserHome(){
     const [ popularMovies, setPopularMovies ] = useState ([]);
     const [ upcomingMovies, setUpcomingMovies] = useState ([])
