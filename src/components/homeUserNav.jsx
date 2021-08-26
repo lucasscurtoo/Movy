@@ -16,7 +16,7 @@ function navbar(){
                      <a><Link to="/">My List</Link></a>
                   </div>
                   <div className="home-navbar-profile">
-                    <a>alo</a>
+                    <a>Profile</a>
                   </div>
              </nav>
       </>

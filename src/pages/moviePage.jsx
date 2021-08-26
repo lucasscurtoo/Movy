@@ -23,9 +23,8 @@ function MoviePage(){
             setMovieCredits(response);
         })
     }, [])
-    console.log(movieCredits) 
-    console.log(movieRequested) 
-    let cast = movieCredits?.cast.slice(0,3)
+   
+    const cast = movieCredits?.cast.slice(0,3)
 
  return(
       <>
@@ -37,26 +36,20 @@ function MoviePage(){
          </div>
          <div className="movie-info">
              <section className="container">
-                 <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                 </ul>
-            <p>{movieRequested?.overview}</p>
+              <p>{movieRequested?.overview}</p>
              </section>
              <section className="container">
                 <ul>
                     <li>Cast:&nbsp;</li>
-                    <li>{cast?.map((item) => `  ${item.name}, `)}</li>
-                    <li>more</li>
+                    <li>{cast?.map((item) => `${item.name}, `)}</li>
+                    <li> more</li>
                 </ul>
                 <ul>
                     <li>Genres:&nbsp;</li>
-                    {/* <li>{movieRequested?.map((item) => ` ${item.name}`)}</li> */}
-                    <li>more</li>
+                    <li>{movieRequested?.genres.map((item) => ` ${item.name}, `)}</li>
+                    <li> more</li>
                 </ul>   
-                {/* <p>{movieRequested?.title}</p> */}
+                
              </section>
          </div>
          <div className="more-like-this">
