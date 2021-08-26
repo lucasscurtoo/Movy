@@ -22,7 +22,6 @@
     width: 12vw;
     height: 90%;
     margin-left: 1vw;
-
 }
 
 .movie img {
@@ -32,7 +31,6 @@
 }
 
 .carousel-box {
-
     overflow: scroll;
     scroll-behavior: smooth;
     color: #fff;

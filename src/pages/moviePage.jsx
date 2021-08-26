@@ -22,7 +22,6 @@ function MoviePage() {
         dispatch(fetchMovieVideos(id))
     }, [])
 
-
 const trailer = movieVideos[0]?.key;
     console.log(trailer)
     return (
@@ -100,7 +99,8 @@ const trailer = movieVideos[0]?.key;
                     </div>
                 </div>
             </div>
-            </>
+
+      </>
     )
 }
 export default MoviePage;
