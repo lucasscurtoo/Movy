@@ -17,7 +17,11 @@ function navbar(){
                      <a><Link to="/">Recently Added</Link></a>
                      <a><Link to="/">My List</Link></a>
                   </div>
+<<<<<<< HEAD
                   <div className="w-1/4 flex justify-end pl-11">
+=======
+                  <div className="home-navbar-profile">
+>>>>>>> 7fcbc16 (making changes to merge)
                     <a>Profile</a>
                   </div>
              </nav>

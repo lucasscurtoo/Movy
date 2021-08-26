@@ -1,12 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .moviePage-box {
 =======
 .moviePage-box{
 >>>>>>> fa7577d (onclick opens a page with the movie clicked)
+=======
+.moviePage-box {
+>>>>>>> 7fcbc16 (making changes to merge)
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
 <<<<<<< HEAD
     background-position: top;
     display: flex;
@@ -58,56 +63,67 @@
 .more-like-this {
 =======
     background-position:top;
+=======
+    background-position: top;
+>>>>>>> 7fcbc16 (making changes to merge)
     display: flex;
     align-items: flex-end;
-    
-}.movie-play{
+}
+
+.movie-play {
     width: 90%;
     height: 30%;
     margin-left: auto;
-    color: #fff;   
+    color: #fff;
 }
 
-.movie-play h1{
+.movie-play h1 {
     font-size: 3vw;
     font-weight: bolder;
 }
 
-.movie-play button{
-padding: 1vh 5vw;
-background-color: #fff;
-color: #000;
-font-size: 2vw;
-font-weight: bold;
-border-radius: 5px;
+.movie-play button {
+    padding: 1vh 5vw;
+    background-color: #fff;
+    color: #000;
+    font-size: 2vw;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-.movie-play img{
-width: 3vw;
-display: inline;
+.movie-play img {
+    width: 3vw;
+    display: inline;
 }
 
-.movie-info{
+.movie-info {
     width: 100vw;
     height: 30vh;
     background-color: rgb(19, 19, 19);
     display: flex;
-    color: #fff;  
+    color: #fff;
 }
-.movie-info p{
+
+.movie-info p {
     font-size: 1.2vw;
 }
-.movie-info ul{
+
+.movie-info ul {
     display: flex;
 }
 
-.container{
+.container {
     width: 40%;
     height: 100%;
     margin: auto;
 }
+<<<<<<< HEAD
 .more-like-this{
 >>>>>>> fa7577d (onclick opens a page with the movie clicked)
+=======
+
+.more-like-this {
+>>>>>>> 7fcbc16 (making changes to merge)
     width: 100vw;
     height: 50vh;
     background-color: #000;

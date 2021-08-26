@@ -15,6 +15,7 @@ function Main(){
             case 'price':
                return <HomePrices/>
 <<<<<<< HEAD
+<<<<<<< HEAD
             case 'cancel':
               return <HomeCancel/>
             case 'watch':
@@ -25,16 +26,19 @@ function Main(){
 =======
                
              
+=======
+>>>>>>> 7fcbc16 (making changes to merge)
             case 'cancel':
               return <HomeCancel/>
-               
-            
             case 'watch':
                 return <HomeWatch/>;
-          
             }
         }
+<<<<<<< HEAD
 >>>>>>> eece3a7 (push)
+=======
+        
+>>>>>>> 7fcbc16 (making changes to merge)
     return(
          <>
             <main>

@@ -48,6 +48,7 @@ function MoviePage(){
         })
     }, [])
 <<<<<<< HEAD
+<<<<<<< HEAD
    
     const cast = movieCredits?.cast.slice(0,3)
 
@@ -58,6 +59,10 @@ function MoviePage(){
     console.log(movieCredits) 
     console.log(movieRequested) 
     let cast = movieCredits?.cast.slice(0,3)
+=======
+   
+    const cast = movieCredits?.cast.slice(0,3)
+>>>>>>> 7fcbc16 (making changes to merge)
 
 >>>>>>> 081fa2f (uploading changes)
  return(
@@ -98,26 +103,20 @@ function MoviePage(){
 >>>>>>> fa7577d (onclick opens a page with the movie clicked)
 =======
              <section className="container">
-                 <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                 </ul>
-            <p>{movieRequested?.overview}</p>
+              <p>{movieRequested?.overview}</p>
              </section>
              <section className="container">
                 <ul>
                     <li>Cast:&nbsp;</li>
-                    <li>{cast?.map((item) => `  ${item.name}, `)}</li>
-                    <li>more</li>
+                    <li>{cast?.map((item) => `${item.name}, `)}</li>
+                    <li> more</li>
                 </ul>
                 <ul>
                     <li>Genres:&nbsp;</li>
-                    {/* <li>{movieRequested?.map((item) => ` ${item.name}`)}</li> */}
-                    <li>more</li>
+                    <li>{movieRequested?.genres.map((item) => ` ${item.name}, `)}</li>
+                    <li> more</li>
                 </ul>   
-                {/* <p>{movieRequested?.title}</p> */}
+                
              </section>
 >>>>>>> 081fa2f (uploading changes)
          </div>
