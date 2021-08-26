@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Carousel = ({data, name}) => {
+
     return (
         <div className="carousel-box w-scroll">
             <h1 className="text-3xl sticky left-0">{name}</h1>
@@ -10,7 +11,6 @@ const Carousel = ({data, name}) => {
                 {data?.map((movie) => <Movie key={data.id} data={movie}/>)} 
               </div>
         </div>
-    
     )
 };
 
@@ -19,4 +19,3 @@ Carousel.propTypes = {
     name: PropTypes.string,
 };
 export default Carousel;
-
