@@ -2,6 +2,7 @@ import React from 'react';
 import { IMAGE_URL } from '../api/movies';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+
 import '../styles/carouselStyles.css';
 
 const Movie = ({ data }) => {
