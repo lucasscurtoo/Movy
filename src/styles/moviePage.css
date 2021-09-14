@@ -50,12 +50,6 @@
     display: flex;
 }
 
-.container {
-    width: 40%;
-    height: 100%;
-    margin: auto;
-}
-
 .more-like-this {
     width: 100vw;
     height: 50vh;
