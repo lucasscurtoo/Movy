@@ -1,63 +1,49 @@
-import { React,useState, useEffect } from 'react';
-import { getPopularMovies, getUpcomingMovies, getNowPlayingMovies } from '../api/movies'
+import { React, useEffect } from 'react';
 import Carousel from '../components/carousel';
 import Highlight from '../components/highlight';
 import Footer from '../components/footer';
+import Loading from '../components/loading'
 import { getRandomNumber } from '../utilities/functions';
+import { useSelector, useDispatch } from 'react-redux'; 
+import { fetchNowPlayingMovies, fetchPopularMovies, fetchUpcomingMovies, setBackgroundMovie } from '../Redux/moviesSlice'
+
 import '../styles/userHome.css'
 
 function UserHome(){
-    const [ popularMovies, setPopularMovies ] = useState ([]);
-    const [ upcomingMovies, setUpcomingMovies] = useState ([])
-    const [ nowPlayingMovies, setNowPlayingMovies] = useState ([])
-    const [ backgroundMovie, setBackgroundMovie] = useState (null)
     
-    useEffect(() => {
-        getPopularMovies()
-        .then((response) => {
-            setPopularMovies(response.results);
-            setBackgroundMovie(response.results[getRandomNumber(response.results.length)])
-        })
-        .catch((error) => {
-            console.log("Error: ", error);
-        });
-    }, []);
+    const loading = useSelector((state) => state.movies.loading);
+    const popular = useSelector((state) => state.movies.popular);
+    const upcoming = useSelector((state) => state.movies.upcoming);
+    const nowPlaying = useSelector((state) => state.movies.nowPlaying);
+    const bgcMovie = useSelector((state) => state.movies.backgroundMovie);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        getUpcomingMovies()
-        .then((response) => {
-            setUpcomingMovies(response.results);
-        })
-        .catch((error) => {
-            console.log("Error: ", error);
-        });
+       dispatch(fetchPopularMovies())
+       dispatch(fetchUpcomingMovies())
+       dispatch(fetchNowPlayingMovies())
     }, []);
-   
     useEffect(() => {
-        getNowPlayingMovies()
-        .then((response) => {
-            setNowPlayingMovies(response.results);
-        })
-        .catch((error) => {
-            console.log("Error: ", error);
-        });
-    }, []);
+        dispatch(setBackgroundMovie(popular[getRandomNumber(popular.length)]))
+    }, [popular])
+    
 
     return(
         <>
-        {backgroundMovie && <Highlight
-            movie={backgroundMovie}
+        {bgcMovie && <Highlight
+            movie={bgcMovie}
         />}
+       {loading && <Loading/>}
         <Carousel 
-            data={popularMovies}
+            data={popular} 
             name="Popular Movies"
         />
         <Carousel 
-            data={upcomingMovies}
+            data={upcoming}
             name="upcoming movies"
         />
         <Carousel 
-            data={nowPlayingMovies}
+            data={nowPlaying}
             name="Now playing in cinemas"
         />
         <Footer/>
