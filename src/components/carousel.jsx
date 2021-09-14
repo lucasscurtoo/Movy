@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import '../styles/carouselStyles.css'
 
 const Carousel = ({data, name}) => {
-
     return (
         <div className="carousel-box">
             <h1>{name}</h1>

@@ -18,10 +18,14 @@ function navbar(){
                      <a><Link to="/">My List</Link></a>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="w-1/4 flex justify-end pl-11">
 =======
                   <div className="home-navbar-profile">
 >>>>>>> 7fcbc16 (making changes to merge)
+=======
+                  <div className="w-1/4 flex justify-end pl-11">
+>>>>>>> 17b391e (adding redux to the project)
                     <a>Profile</a>
                   </div>
              </nav>

@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { getMovieCredits, getMovieDetails,IMAGE_URL } from '../api/movies'; 
 import playImage from '../images/playImg.jpg'
 
+<<<<<<< HEAD
 =======
 import { getMovieDetails,IMAGE_URL } from '../api/movies'; 
 >>>>>>> fa7577d (onclick opens a page with the movie clicked)
@@ -12,6 +13,8 @@ import { getMovieDetails,IMAGE_URL } from '../api/movies';
 import { getMovieCredits, getMovieDetails,IMAGE_URL } from '../api/movies'; 
 import playImage from '../images/playImg.jpg'
 >>>>>>> 081fa2f (uploading changes)
+=======
+>>>>>>> 17b391e (adding redux to the project)
 import '../styles/moviePage.css'
 
 
@@ -19,11 +22,16 @@ function MoviePage(){
     let {id} = useParams();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 
     const [ movieRequested, setMovieRequested ] = useState(null);
     const [ movieCredits, setMovieCredits ] = useState(null);
 =======
+=======
+   
+
+>>>>>>> 17b391e (adding redux to the project)
     const [ movieRequested, setMovieRequested ] = useState(null);
 <<<<<<< HEAD
 >>>>>>> fa7577d (onclick opens a page with the movie clicked)
@@ -70,6 +78,7 @@ function MoviePage(){
          <div className="moviePage-box" style={{backgroundImage: `url(${IMAGE_URL}${movieRequested?.poster_path})`}}>
             <div className="movie-play">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h1 className="text-blue">{movieRequested?.title}</h1>
                 <button><img src={playImage}></img>Play</button>
             </div>
@@ -94,8 +103,12 @@ function MoviePage(){
              </section>
 =======
                 <h1>{movieRequested?.title}</h1>
+=======
+                <h1 className="text-blue">{movieRequested?.title}</h1>
+>>>>>>> 17b391e (adding redux to the project)
                 <button><img src={playImage}></img>Play</button>
             </div>
+            
          </div>
          <div className="movie-info">
 <<<<<<< HEAD
