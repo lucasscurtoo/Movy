@@ -43,6 +43,7 @@ function MoviePage() {
 
     const [ movieRequested, setMovieRequested ] = useState(null);
     const [ movieCredits, setMovieCredits ] = useState(null);
+<<<<<<< HEAD
 =======
 =======
    
@@ -67,6 +68,9 @@ function MoviePage() {
     const movieVideos = useSelector(state => state.movies.movieVideos)
     const dispatch = useDispatch();
 >>>>>>> 140d4f5 (adding movieSimilars to the movie page)
+=======
+   
+>>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
 
     useEffect(() => {
         dispatch(fetchMovieDetails(id))
@@ -88,6 +92,7 @@ function MoviePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
     const cast = movieCredits?.cast.slice(0,3)
 
@@ -102,6 +107,9 @@ function MoviePage() {
 =======
   
 >>>>>>> 3cda24c (subiendo archivos para ver como arreglar un problema de redux)
+=======
+  
+>>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
    
     const cast = movieCredits?.cast.slice(0,3)
 >>>>>>> 7fcbc16 (making changes to merge)
@@ -118,11 +126,20 @@ function MoviePage() {
       <>
          <div className="moviePage-box" style={{backgroundImage: `url(${IMAGE_URL}${movieRequested?.poster_path})`}}>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="movie-play">
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+              <div className="h-3/5 w-11/12 mt-2">
+                  <Link to="/home">
+                    <img className="w-8 " src={backImage}/>
+                  </Link>
+              </div>
+            <div className="w-11/12 h-2/5 ml-auto text-white">
+>>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
                 <h1 className="text-blue">{movieRequested?.title}</h1>
-                <button><img src={playImage}></img>Play</button>
+                <button className="py-2 px-4 bgc-white text-black font"><img className="w-10 inline" src={playImage}></img>Play</button>
             </div>
             
          </div>
