@@ -2,6 +2,8 @@ import React, { useState,useEffect } from 'react'
 import { useParams } from 'react-router';
 import { getMovieCredits, getMovieDetails,IMAGE_URL } from '../api/movies'; 
 import playImage from '../images/playImg.jpg'
+import backImage from '../images/flechaizq.png'
+import {Link} from 'react-router-dom';
 
 import '../styles/moviePage.css'
 
@@ -13,6 +15,7 @@ function MoviePage(){
 
     const [ movieRequested, setMovieRequested ] = useState(null);
     const [ movieCredits, setMovieCredits ] = useState(null);
+   
 
     useEffect(() => {
         getMovieDetails(id)
@@ -26,15 +29,21 @@ function MoviePage(){
             setMovieCredits(response);
         })
     }, [])
+  
    
     const cast = movieCredits?.cast.slice(0,3)
 
  return(
       <>
          <div className="moviePage-box" style={{backgroundImage: `url(${IMAGE_URL}${movieRequested?.poster_path})`}}>
-            <div className="movie-play">
+              <div className="h-3/5 w-11/12 mt-2">
+                  <Link to="/home">
+                    <img className="w-8 " src={backImage}/>
+                  </Link>
+              </div>
+            <div className="w-11/12 h-2/5 ml-auto text-white">
                 <h1 className="text-blue">{movieRequested?.title}</h1>
-                <button><img src={playImage}></img>Play</button>
+                <button className="py-2 px-4 bgc-white text-black font"><img className="w-10 inline" src={playImage}></img>Play</button>
             </div>
             
          </div>

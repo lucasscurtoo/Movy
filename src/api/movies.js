@@ -22,7 +22,6 @@ export const getMovieDetails = (movieId) => (
   .then((response) => response.json())
   )
 
-
 export const getMovieCredits = (movieId) =>  (
    fetch(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`)
   .then((response) => response.json())
