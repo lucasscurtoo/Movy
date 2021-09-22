@@ -15,6 +15,9 @@ const Highlight = ({
         dispatch(fetchMovieDetails(movie.id))
     }, [movie]);
 
+
+    console.log(movie.id)
+    console.log(movieDetails)
     return (
         <>
             <Navbar />
