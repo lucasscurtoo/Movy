@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
+import { getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
 
 export const fetchPopularMovies = createAsyncThunk('movies/fetchPopular', async() => {
     const response = await getPopularMovies();

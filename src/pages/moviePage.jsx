@@ -96,7 +96,7 @@ const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1`
                     </div> 
                 </div>
             </div>
-    </>
- )   
+            </>
+    )
 }
 export default MoviePage;
