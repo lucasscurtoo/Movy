@@ -6,14 +6,11 @@
     background-position: top;
     display: flex;
     align-items: flex-end;
+    display: flex;
+    flex-direction: column;
 }
 
-.movie-play {
-    width: 90%;
-    height: 30%;
-    margin-left: auto;
-    color: #fff;
-}
+
 
 .movie-play h1 {
     font-size: 3vw;

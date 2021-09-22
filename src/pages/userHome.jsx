@@ -26,7 +26,6 @@ function UserHome(){
     useEffect(() => {
         dispatch(setBackgroundMovie(popular[getRandomNumber(popular.length)]))
     }, [popular])
-    
 
     return(
         <>
