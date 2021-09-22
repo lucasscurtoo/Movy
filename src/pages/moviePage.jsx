@@ -8,7 +8,6 @@ import { faArrowLeft, faPlay, faPlus, faThumbsUp, faThumbsDown, faVolumeMute, fa
 import { fetchMovieDetails, fetchMovieSimilar, fetchMovieVideos } from '../Redux/moviesSlice';
 import MovieSimilarCarousel from '../components/movieSimilarCarousel';
 
-
 function MoviePage() {
     let { id } = useParams();
 
@@ -99,8 +98,8 @@ const trailer = movieVideos[0]?.key;
                         
                     </div>
                 </div>
-            </div>
- 
+                </div>
+
       </>
     )
 }
