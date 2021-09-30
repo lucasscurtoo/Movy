@@ -13,12 +13,9 @@ const Highlight = ({
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchMovieDetails(dispatch, movie.id))
+        dispatch(fetchMovieDetails(movie.id))
     }, [movie]); 
-
-
-    console.log(movie.id)
-    console.log(movieDetails)
+console.log(movieDetails)
     return (
         <div className="w-full bg-cover bg-no-repeat bg-center h-screen sm:h-80" style={{ backgroundImage: `url(${IMAGE_URL}${movieDetails?.backdrop_path})` }}>
             <Navbar/>

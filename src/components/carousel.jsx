@@ -17,6 +17,5 @@ const Carousel = ({data, name}) => {
 Carousel.propTypes = {
     data: PropTypes.array,
     name: PropTypes.string,
-    map: PropTypes.func
 };
 export default Carousel;

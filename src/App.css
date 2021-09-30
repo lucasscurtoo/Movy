@@ -142,3 +142,12 @@ header{
     font-weight: 300;
     
 }
+.white-to-gray{
+    color:white;
+}
+.white-to-gray:hover{
+    color: rgb(224, 224, 224);
+}
+.bgGray{
+    background-color: #302E30;
+}

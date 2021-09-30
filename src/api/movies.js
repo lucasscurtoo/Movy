@@ -18,11 +18,12 @@ export const getNowPlayingMovies = () => (
 )
 
 export const getMovieDetails = (movieId) => (
-   fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`)
-  .then((response) => response.json())
-  )
-
-export const getMovieCredits = (movieId) =>  (
-   fetch(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`)
+   fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&append_to_response=credits`)
   .then((response) => response.json())
 )
+
+export const getMovieSimilar = (movieId) =>  (
+  fetch(`${BASE_URL}/movie/${movieId}/similar?api_key=${API_KEY}`)
+ .then((response) => response.json())
+)
+

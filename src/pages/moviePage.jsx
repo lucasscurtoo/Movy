@@ -1,73 +1,85 @@
-import React, { useState,useEffect } from 'react'
-import { useParams } from 'react-router';
-import { getMovieCredits, getMovieDetails,IMAGE_URL } from '../api/movies'; 
-import playImage from '../images/playImg.jpg'
-import backImage from '../images/flechaizq.png'
+import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom';
-
-import '../styles/moviePage.css'
+import { useParams } from 'react-router';
+import { IMAGE_URL } from '../api/movies'; 
+import { useDispatch, useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons'
+import { faVolumeMute } from '@fortawesome/free-solid-svg-icons'
+import { fetchMovieDetails, fetchMovieSimilar } from '../Redux/moviesSlice';
+import MovieSimilarCarousel from '../components/movieSimilarCarousel';
 
 
 function MoviePage(){
     let {id} = useParams();
 
-   
-
-    const [ movieRequested, setMovieRequested ] = useState(null);
-    const [ movieCredits, setMovieCredits ] = useState(null);
-   
+    const movieDetails =  useSelector((state) => state.movies.movieDetails)
+    const movieSimilar = useSelector(state => state.movies.movieSimilar)
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        getMovieDetails(id)
-        .then((response) => {
-            setMovieRequested(response);
-        })
+        dispatch(fetchMovieDetails(id))
+        dispatch(fetchMovieSimilar(id))
     }, [])
-    useEffect(() => {
-        getMovieCredits(id)
-        .then((response) => {
-            setMovieCredits(response);
-        })
-    }, [])
-  
    
-    const cast = movieCredits?.cast.slice(0,3)
+    const cast = movieDetails?.credits?.cast.slice(0,3)
+
+    console.log(movieDetails)
 
  return(
-      <>
-         <div className="moviePage-box" style={{backgroundImage: `url(${IMAGE_URL}${movieRequested?.poster_path})`}}>
+         
+         <> 
+         <div className="w-screen h-screen bg-no-repeat bg-cover bg-top" style={{backgroundImage: `url(${IMAGE_URL}${movieDetails?.poster_path})`}}>
+             <div className="w-11/12 h-full mx-auto flex items-end flex-col">
               <div className="h-3/5 w-11/12 mt-2">
                   <Link to="/home">
-                    <img className="w-8 " src={backImage}/>
+                    <FontAwesomeIcon icon={faArrowLeft} size="2x" className="white-to-gray"/>
                   </Link>
               </div>
-            <div className="w-11/12 h-2/5 ml-auto text-white">
-                <h1 className="text-blue">{movieRequested?.title}</h1>
-                <button className="py-2 px-4 bgc-white text-black font"><img className="w-10 inline" src={playImage}></img>Play</button>
+            <div className="w-11/12 h-2/5 text-white flex flex-col justify-center">
+                <h1 className="text-4xl font-bold ">{movieDetails?.title}</h1>
+                    <div className="flex flex-row mt-6 items-center ">
+                    <button className="py-2 px-10 bg-white text-black font-xs font-bold rounded-lg w-max hover:bg-gray-200 flex items-center">
+                        <FontAwesomeIcon icon={faPlay} size="2x"/>
+                        <h1 className="ml-4 text-xl">Play</h1>
+                    </button>
+                        <FontAwesomeIcon icon={faPlus} size="2x" className="ml-4 cursor-pointer"/>
+                        <FontAwesomeIcon icon={faThumbsUp} size="2x" className="ml-4 cursor-pointer"/>
+                        <FontAwesomeIcon icon={faThumbsDown} size="2x" className="ml-4 cursor-pointer"/>
+                        <FontAwesomeIcon icon={faVolumeMute} size="2x" className="ml-auto mr-6 cursor-pointer"/>
+                    </div>
             </div>
             
-         </div>
-         <div className="movie-info">
-             <section className="container">
-              <p>{movieRequested?.overview}</p>
+        </div>
+         <div className="w-screen h-2/6 bgGray flex text-white justify-center">
+             <section className="w-2/5 h-full">
+                 <p className="text-blue-500 font-bold">{movieDetails?.release_date?.slice(0,4)}</p>
+              <p>{movieDetails?.overview}</p>
              </section>
-             <section className="container">
-                <ul>
-                    <li>Cast:&nbsp;</li>
-                    <li>{cast?.map((item) => `${item.name}, `)}</li>
-                    <li> more</li>
+             <section className="w-2/5 h-full">
+                 <ul>
+                    <li className="inline text-gray-400">Cast:&nbsp;</li>
+                    <li className="inline">{cast?.map((item) => `${item.name}, `)}</li>
+                    <li className="inline"> more</li>
                 </ul>
                 <ul>
-                    <li>Genres:&nbsp;</li>
-                    <li>{movieRequested?.genres.map((item) => ` ${item.name}, `)}</li>
-                    <li> more</li>
+                    <li className="inline text-gray-400">Genres:&nbsp;</li>
+                    <li className="inline">{movieDetails?.genres?.map((item) => ` ${item.name}, `)}</li>
+                    <li className="inline"> more</li>
                 </ul>   
                 
              </section>
          </div>
-         <div className="more-like-this">
-
+         <div className="w-screen h-screen bg-black">
+                <MovieSimilarCarousel
+                    data={movieSimilar}
+                />
          </div>
+       </div>
       </>
     )
 }
