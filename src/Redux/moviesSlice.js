@@ -1,9 +1,13 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
 =======
 import { getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies } from '../api/movies';
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
+=======
+import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar } from '../api/movies';
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
 
 export const fetchPopularMovies = createAsyncThunk('movies/fetchPopular', async() => {
     const response = await getPopularMovies();
@@ -20,10 +24,14 @@ export const fetchNowPlayingMovies = createAsyncThunk('movies/fetchNowPlaying', 
 export const fetchMovieDetails = createAsyncThunk('movies/movieDetails', async(movieId) =>{
     const response = await getMovieDetails(movieId);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
     return response;
 })
 export const fetchMovieSimilar = createAsyncThunk('movie/movieSimilar', async(movieId) =>{
     const response = await getMovieSimilar(movieId);
+<<<<<<< HEAD
     return response.results;
 })
 export const fetchMovieVideos = createAsyncThunk('movie/movieVideos', async(movieId) =>{
@@ -32,8 +40,9 @@ export const fetchMovieVideos = createAsyncThunk('movie/movieVideos', async(movi
 })
 
 =======
+=======
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
     return response.results;
-
 })
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
 export const moviesSlice = createSlice({
@@ -46,10 +55,14 @@ export const moviesSlice = createSlice({
         backgroundMovie: [],
         movieDetails: [],
 <<<<<<< HEAD
+<<<<<<< HEAD
         movieSimilar: [],
         movieVideos:[],
 =======
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
+=======
+        movieSimilar: [],
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
     },
     reducers: {
         setBackgroundMovie: (state, action) => {
@@ -57,6 +70,7 @@ export const moviesSlice = createSlice({
         }
     },
     extraReducers: builder => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         builder.addCase(fetchPopularMovies.fulfilled, (state, action) => {
             state.loading = false;
@@ -68,20 +82,25 @@ export const moviesSlice = createSlice({
         builder.addCase(fetchPopularMovies.pending, (state) => {
             state.loading = true;
         }).addCase(fetchPopularMovies.fulfilled, (state, action) => {
+=======
+        builder.addCase(fetchPopularMovies.fulfilled, (state, action) => {
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
             state.loading = false;
             state.popular = action.payload;
-        }).addCase(fetchUpcomingMovies.pending, (state) => {
-            state.loading = true;
         }).addCase(fetchUpcomingMovies.fulfilled, (state, action) => {
             state.loading = false;
             state.upcoming = action.payload;
+<<<<<<< HEAD
         }).addCase(fetchNowPlayingMovies.pending, (state) => {
             state.loading = true;
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
+=======
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
         }).addCase(fetchNowPlayingMovies.fulfilled, (state, action) => {
             state.loading = false;
             state.nowPlaying = action.payload;
         })
+<<<<<<< HEAD
 <<<<<<< HEAD
         .addCase(fetchMovieDetails.pending, (state, action) =>{
             state.loading = true;
@@ -101,6 +120,18 @@ export const moviesSlice = createSlice({
         .addCase(fetchMovieDetails.fulfilled, (state, action) =>{
             state.movieDetails = action.payload;
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
+=======
+        .addCase(fetchMovieDetails.pending, (state, action) =>{
+            state.loading = true;
+        })
+        .addCase(fetchMovieDetails.fulfilled, (state, action) =>{
+            state.movieDetails = action.payload;
+            state.loading = false;
+        })
+        .addCase(fetchMovieSimilar.fulfilled, (state, action) =>{
+            state.movieSimilar = action.payload;
+            state.loading = false;
+>>>>>>> 87756c5 (adding movieSimilars to the movie page)
         })
     }
 })
