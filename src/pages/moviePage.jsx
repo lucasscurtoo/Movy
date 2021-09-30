@@ -23,7 +23,6 @@ function MoviePage() {
     }, [])
 
 const trailer = movieVideos[0]?.key;
-    console.log(trailer)
     return (
         <>
             <div className="w-screen bgGray ">
@@ -99,7 +98,6 @@ const trailer = movieVideos[0]?.key;
                     </div>
                 </div>
                 </div>
-
       </>
     )
 }
