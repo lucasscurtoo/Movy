@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar } from '../api/movies';
+import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
 
 export const fetchPopularMovies = createAsyncThunk('movies/fetchPopular', async() => {
     const response = await getPopularMovies();
@@ -21,6 +21,11 @@ export const fetchMovieSimilar = createAsyncThunk('movie/movieSimilar', async(mo
     const response = await getMovieSimilar(movieId);
     return response.results;
 })
+export const fetchMovieVideos = createAsyncThunk('movie/movieVideos', async(movieId) =>{
+    const response = await getMovieVideos(movieId);
+    return response.results;
+})
+
 export const moviesSlice = createSlice({
     name: 'movies',
     initialState: {
@@ -31,6 +36,7 @@ export const moviesSlice = createSlice({
         backgroundMovie: [],
         movieDetails: [],
         movieSimilar: [],
+        movieVideos:[],
     },
     reducers: {
         setBackgroundMovie: (state, action) => {
@@ -57,6 +63,10 @@ export const moviesSlice = createSlice({
         })
         .addCase(fetchMovieSimilar.fulfilled, (state, action) =>{
             state.movieSimilar = action.payload;
+            state.loading = false;
+        })
+        .addCase(fetchMovieVideos.fulfilled, (state, action) =>{
+            state.movieVideos = action.payload; 
             state.loading = false;
         })
     }

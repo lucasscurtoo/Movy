@@ -1,13 +1,11 @@
 import React from 'react';
-import movieSimilar from './movieSimilar';
 import PropTypes from 'prop-types';
 import MovieSimilar from './movieSimilar';
 
 const MovieSimilarCarousel = ({data}) => {
-    const first = data.slice(0,3)
     return(
-        <div className="w-max h-max flex justify-between">
-          {first?.map((movie) => <MovieSimilar key={data.id} data={movie}/>)}
+        <div className="w-max flex flex-row flex-wrap">
+          {data?.map((movie) => <MovieSimilar key={data.id} data={movie}/>)}
         </div>
     )
 }
