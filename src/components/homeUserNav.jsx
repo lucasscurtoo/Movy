@@ -1,12 +1,23 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import MovyLogo from '../images/Movy-logo.png'
 
 function navbar(){
+  const [navBarScroll, setNavBarScroll] = useState(false);
+
+  const navBarBackground = () =>{
+    if(window.scrollY >= 80) {
+      setNavBarScroll(true)
+     
+    }else{
+      setNavBarScroll(false)
+    }
+  }
+window.addEventListener('scroll', navBarBackground);
     return(
         <>
-            <nav className="w-screen h-10 flex text-xl items-center  justify-center text-white sm:text-xs md-text-xs">
+            <nav className={navBarScroll ? ' navbar active ' : 'navbar'} >
                  <div className="w-1/4">
                      <Link to="/" className="w-100"> <img src={MovyLogo} className="w-20 object-cover sm:w-10"></img></Link>
                   </div>

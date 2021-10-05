@@ -41,6 +41,12 @@
 >>>>>>> 55030bc (adding home, movies and promises to the API)
 =======
 
+.movie:hover {
+    transition-delay: 1s;
+    transition: 0.5s all;
+    transform: scale(1.3);
+}
+
 .movie img {
 >>>>>>> 2ac6abd (subiendo los errores)
     width: 100%;
