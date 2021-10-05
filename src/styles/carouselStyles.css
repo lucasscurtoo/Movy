@@ -24,6 +24,12 @@
     margin-left: 1vw;
 }
 
+.movie:hover {
+    transition-delay: 1s;
+    transition: 0.5s all;
+    transform: scale(1.3);
+}
+
 .movie img {
     width: 100%;
     height: auto;
