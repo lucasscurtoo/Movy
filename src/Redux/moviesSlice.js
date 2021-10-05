@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
 =======
 import { getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies } from '../api/movies';
@@ -8,6 +9,9 @@ import { getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovi
 =======
 import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar } from '../api/movies';
 >>>>>>> 87756c5 (adding movieSimilars to the movie page)
+=======
+import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
+>>>>>>> 4ca6a93 (uploadingMoreFeatures)
 
 export const fetchPopularMovies = createAsyncThunk('movies/fetchPopular', async() => {
     const response = await getPopularMovies();
@@ -39,12 +43,15 @@ export const fetchMovieVideos = createAsyncThunk('movie/movieVideos', async(movi
     return response.results;
 })
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 87756c5 (adding movieSimilars to the movie page)
     return response.results;
 })
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
+=======
+>>>>>>> 4ca6a93 (uploadingMoreFeatures)
 export const moviesSlice = createSlice({
     name: 'movies',
     initialState: {
@@ -62,7 +69,11 @@ export const moviesSlice = createSlice({
 >>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
 =======
         movieSimilar: [],
+<<<<<<< HEAD
 >>>>>>> 87756c5 (adding movieSimilars to the movie page)
+=======
+        movieVideos:[],
+>>>>>>> 4ca6a93 (uploadingMoreFeatures)
     },
     reducers: {
         setBackgroundMovie: (state, action) => {
@@ -132,6 +143,10 @@ export const moviesSlice = createSlice({
             state.movieSimilar = action.payload;
             state.loading = false;
 >>>>>>> 87756c5 (adding movieSimilars to the movie page)
+        })
+        .addCase(fetchMovieVideos.fulfilled, (state, action) =>{
+            state.movieVideos = action.payload; 
+            state.loading = false;
         })
     }
 })
