@@ -25,12 +25,13 @@ function UserHome() {
         dispatch(setBackgroundMovie(popular[getRandomNumber(popular.length)]))
     }, [popular])
 
+
     return (
         <>
+        {loading && <Loading />}
             {bgcMovie && <Highlight
                 movie={bgcMovie}
             />}
-            {loading && <Loading />}
             <Carousel
                 data={popular}
                 name="Popular Movies"

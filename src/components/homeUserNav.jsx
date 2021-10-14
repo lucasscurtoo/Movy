@@ -1,22 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import MovyLogo from '../images/Movy-logo.png'
 
 function navbar(){
-  const [navBarScroll, setNavBarScroll] = useState(false);
+  const [navBackground, setNavBackground] = useState('navbar');
+  const navRef = React.useRef()
+  navRef.current = navBackground;
 
-  const navBarBackground = () =>{
-    if(window.scrollY >= 80) {
-      setNavBarScroll(true)
-     
-    }else{
-      setNavBarScroll(false)
+  useEffect(() => {
+    const scroll = () => {
+      const show = window.scrollY > 80
+      if (show) {
+        setNavBackground('navbar active')
+      }else{
+        setNavBackground('navbar')
+      }
     }
-  }
-window.addEventListener('scroll', navBarBackground);
+    document.addEventListener('scroll', scroll)
+
+  }, [])
     return(
         <>
-            <nav className={navBarScroll ? ' navbar active ' : 'navbar'} >
+            <nav className={navBackground} >
                  <div className="w-1/4">
                      <Link to="/" className="w-100"> <img src={MovyLogo} className="w-20 object-cover sm:w-10"></img></Link>
                   </div>

@@ -1,13 +1,12 @@
 import Movie from "./movie";
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/carouselStyles.css'
 
 const Carousel = ({data, name}) => {
     return (
-        <div className="carousel-box">
-            <h1>{name}</h1>
-              <div className="carousel-img">
+        <div className="carousel-box w-scroll">
+            <h1 className="text-3xl sticky left-0">{name}</h1>
+              <div className="w-max h-max flex items-center overflow-visible carousel">
                 {data?.map((movie) => <Movie key={data.id} data={movie}/>)} 
               </div>
         </div>
