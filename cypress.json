@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 {
     "baseUrl":"http://localhost:3000"
 }
+=======
+{}
+>>>>>>> 861cfed (adding cypress test to movy page)

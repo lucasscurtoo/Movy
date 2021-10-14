@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useRef } from 'react';
+=======
+import React, {useState, useEffect} from 'react';
+>>>>>>> 861cfed (adding cypress test to movy page)
 import { Link } from 'react-router-dom';
 import MovyLogo from '../images/Movy-logo.png'
 
