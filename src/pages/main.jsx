@@ -14,7 +14,6 @@ function Main(){
         switch (homeState) {
             case 'price':
                return <HomePrices/>
-
             case 'cancel':
               return <HomeCancel/>
             case 'watch':

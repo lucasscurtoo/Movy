@@ -11,11 +11,11 @@ function Movy(){
     <>
     <Router>
       <Switch>
-        <Route path="/login">
-          <LogIn/>
-        </Route>
         <Route path="/" exact>
           <Main/>
+        </Route>
+        <Route path="/login">
+          <LogIn/>
         </Route>
         <Route path="/home">
           <UserHome/>
