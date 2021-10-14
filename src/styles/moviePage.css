@@ -1,27 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 .moviePage-box {
-=======
-.moviePage-box{
->>>>>>> fa7577d (onclick opens a page with the movie clicked)
-=======
-.moviePage-box {
->>>>>>> 7fcbc16 (making changes to merge)
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-position: top;
     display: flex;
     align-items: flex-end;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
 }
-
-
 
 .movie-play h1 {
     font-size: 3vw;
@@ -58,20 +45,6 @@
     display: flex;
 }
 
-.more-like-this {
-=======
-    background-position:top;
-=======
-    background-position: top;
->>>>>>> 7fcbc16 (making changes to merge)
-    display: flex;
-    align-items: flex-end;
-=======
->>>>>>> 4149e80 (subiendo archivos para ver como arreglar un problema de redux)
-}
-
-
-
 .movie-play h1 {
     font-size: 3vw;
     font-weight: bolder;
@@ -107,21 +80,14 @@
     display: flex;
 }
 
-<<<<<<< HEAD
+
 .container {
     width: 40%;
     height: 100%;
     margin: auto;
 }
-<<<<<<< HEAD
-.more-like-this{
->>>>>>> fa7577d (onclick opens a page with the movie clicked)
-=======
-
-=======
->>>>>>> 17b391e (adding redux to the project)
 .more-like-this {
->>>>>>> 7fcbc16 (making changes to merge)
+
     width: 100vw;
     height: 50vh;
     background-color: #000;
