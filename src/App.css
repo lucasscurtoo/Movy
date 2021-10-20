@@ -2,6 +2,9 @@
 *{
     font-family: 'SF Pro Display', sans-serif;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
 main{
     background-image: url('./images/Bitmap.png');
     width: 100vw;
