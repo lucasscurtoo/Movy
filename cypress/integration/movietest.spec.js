@@ -1,15 +1,7 @@
 /* eslint-disable no-undef */
-
-// movie.spec.js created with Cypress
-//d
-// Start writing your Cypress tests below!
-// If you're unfamiliar with how Cypress works,
-// check out the link below and learn how to write your first test:
-// https://on.cypress.io/writing-first-test
-
 describe('movie-page', () =>{
     beforeEach(() => {
-        cy.visit('http://localhost:3000/')
+        cy.visit('/')
     })
 
     it('scroll to price section and click it', () => {
@@ -28,8 +20,12 @@ describe('movie-page', () =>{
         cy.get('form #Log-in').click();
 
     })
-    it('making scroll to the carousel movies', () => {
-        cy.visit('http://localhost:3000/home')
+})
+describe('home test', () => {
+    beforeEach(() =>{
+        cy.visit('/home')
+    })
+    it('counting the movie array length', () => {
         cy.get('.carousel').first().children().should('have.length', 20)
        
     })
