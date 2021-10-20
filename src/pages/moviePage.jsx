@@ -22,8 +22,8 @@ function MoviePage() {
         dispatch(fetchMovieSimilar(id))
         dispatch(fetchMovieVideos(id))
     }, [])
-// const trailer = movieVideos[0]?.key;
-    // console.log(trailer)
+const trailer = movieVideos[0]?.key;
+    console.log(trailer)
     return (
         <>
             <div className="w-screen bgGray ">
@@ -58,12 +58,12 @@ function MoviePage() {
                         </section>
                         <section className="w-3/6 mt-4">
                             <ul className="text-xl ">
-                                <li className="inline text-gray-400 ">Cast:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Cast:</li>
                                 <li className="inline">{movieDetails?.credits?.cast.slice(0, 3)?.map((item) => `${item.name}, `)}</li>
                                 <a href="#cast">more</a>
                             </ul>
                             <ul className="text-xl pt-6">
-                                <li className="inline text-gray-400">Genres:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Genres:</li>
                                 <li className="inline">{movieDetails?.genres?.map((item) => ` ${item.name}, `)}</li>
                                 <li className="inline"> more</li>
                             </ul>
@@ -80,22 +80,21 @@ function MoviePage() {
                         <div className="w-11/12 h-full mx-auto  ">
                             <h1 className="text-3xl">Acerca de <strong>{movieDetails?.title}</strong></h1>
                             <ul className="text-xl mt-4" id="cast">
-                                <li className="inline text-gray-400 ">Cast:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Cast:</li>
                                 <li className="inline">{movieDetails?.credits?.cast.slice(0,6).map((item) => `${item.name}, `)}</li>
                             </ul>
                             <ul className="text-xl mt-2">
-                                <li className="inline text-gray-400 ">Crew:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Crew:</li>
                                 <li className="inline">{movieDetails?.credits?.crew.slice(0,6).map((item) => `${item.name}, `)}</li>
                             </ul>
                             <ul className="text-xl mt-2">
-                                <li className="inline text-gray-400 ">Genres:&nbsp;</li>
+                                <li className="inline text-gray-400 mr-2">Genres:</li>
                                 <li className="inline">{movieDetails?.genres?.map((item) => `${item.name}, `)}</li>
                             </ul>
-                        </div>
-                    </div>
+                        </div>   
+                    </div> 
                     <div className="w-screen h-screen">
-                    {/* <video className="w-full h-full" src={Youtube_URL +trailer}></video> */}
-
+                    <video src="https://www.youtube.com/watch?v=SUXWAEX2jlg" ></video>
                     </div>
                 </div>
             </div>
