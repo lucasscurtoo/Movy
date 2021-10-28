@@ -22,12 +22,13 @@ function MoviePage() {
         dispatch(fetchMovieSimilar(id))
         dispatch(fetchMovieVideos(id))
     }, [])
-const trailer = movieVideos[0]?.key;
-    console.log(trailer)
+     
+const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1` 
+
     return (
         <>
-            <div className="w-screen bgGray ">
-                <div className="w-screen h-screen bg-no-repeat bg-cover bg-top mr-auto" style={{ backgroundImage: `url(${IMAGE_URL}${movieDetails?.poster_path})` }}>
+            <div className="w-screen h-screen bgGray ">
+              <iframe width="100%" height="100%" src={trailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
                     <div className="w-11/12 h-full mx-auto">
                         <div className="h-3/5 w-11/12 pt-2">
                             <Link to="/home">
@@ -48,7 +49,7 @@ const trailer = movieVideos[0]?.key;
                             </div>
                         </div>
                     </div>
-                </div>
+                </iframe>
                 <div className="w-screen h-60 bgGray text-white">
                     <div className="w-11/12 h-full mx-auto flex ">
                         <section className="w-3/6 mt-4">
@@ -93,9 +94,6 @@ const trailer = movieVideos[0]?.key;
                             </ul>
                         </div>   
                     </div> 
-                    <div className="w-screen h-screen">
-                    <video src="https://www.youtube.com/watch?v=SUXWAEX2jlg" ></video>
-                    </div>
                 </div>
             </div>
 
