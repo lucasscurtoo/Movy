@@ -5,6 +5,8 @@ import React, {useState, useEffect} from 'react';
 >>>>>>> 861cfed (adding cypress test to movy page)
 import { Link } from 'react-router-dom';
 import MovyLogo from '../images/Movy-logo.png'
+import Profile from '../auth/userProfileInfo';
+import LogoutButton from '../auth/logOut'
 
 function navbar(){
   const [navBackground, setNavBackground] = useState('navbar');
@@ -37,7 +39,8 @@ function navbar(){
                      <a><Link to="/">My List</Link></a>
                   </div>
                   <div className="w-1/4 flex justify-end pl-11">
-                    <a>Profile</a>
+                    <Link to="/profile"><Profile/></Link>
+                    <LogoutButton/>
                   </div>
              </nav>
       </>
