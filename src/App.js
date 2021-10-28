@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Main from './pages/main';
 import LogIn from './pages/logIn';
-import UserHome from './pages/userHome'
+import UserHome from './pages/userHome';
+import UserProfile from './pages/userProfilePage';
 import './App.css';
 import MoviePage from './pages/moviePage';
 
@@ -22,6 +23,9 @@ function Movy(){
         </Route>
         <Route path="/movie/:id">
          <MoviePage/>
+        </Route>
+        <Route path="/profile">
+          <UserProfile/>
         </Route>
       </Switch>
     </Router>

@@ -1,11 +1,14 @@
+import LoginButton from '../auth/loginButton';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Footer from '../components/footer'
 import Header from '../components/header'
 import FacebookIcon from '../images/facebook-icon.png'
 import '../styles/login.css'
+import LogoutButton from '../auth/logOut';
 
 function logIn() {
+
     return ( 
     <> 
      <main>
@@ -16,7 +19,7 @@ function logIn() {
                      <h1>Inicia sesión</h1>
                      <input placeholder="Email o número de teléfono"></input>
                      <input placeholder="Contraseña"></input>
-                     <Link to="/home" id="Log-in">Iniciar sesión</Link>
+                     <LoginButton />
                  </form>
                  <section>
                      <input type="checkbox" id="activarCheckbox"></input>
