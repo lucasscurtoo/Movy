@@ -2,6 +2,9 @@
 *{
     font-family: 'SF Pro Display', sans-serif;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
 main{
     background-image: url('./images/Bitmap.png');
     width: 100vw;
@@ -156,14 +159,11 @@ header{
 .bgLila{
     background-color: #FF0C6C;
 }
-
-
-.movie:hover {
-    transition-delay: 1s;
-    transition: 0.5s all;
-    transform: scale(1.3);
+.w-scroll::-webkit-scrollbar {
+    display: none;
 }
-.moviesimilar:hover{
+
+.enlarge:hover {
     transition-delay: 1s;
     transition: 0.5s all;
     transform: scale(1.3);
@@ -186,6 +186,14 @@ header{
  .navbar.active{
      transition: 0.6s all;
     background-color:  #131313;;
+}
+.carousel-box {
+    overflow-x: scroll;
+    overflow-y:hidden;
+    scroll-behavior: smooth;
+    color: #fff;
+    background-color: #000;
+    padding-top: 5vh;
 }
 @media only screen and (max-width: 768px) {
     .navbar{

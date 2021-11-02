@@ -20,7 +20,6 @@ function Main(){
                 return <HomeWatch/>;
             }
         }
-        
     return(
          <>
             <main>

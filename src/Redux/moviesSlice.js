@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { getMovieCredits, getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import { getMovieDetails, getNowPlayingMovies, getPopularMovies, getUpcomingMovies, getMovieSimilar, getMovieVideos } from '../api/movies';
 
 export const fetchPopularMovies = createAsyncThunk('movies/fetchPopular', async() => {
     const response = await getPopularMovies();
@@ -13,19 +13,18 @@ export const fetchNowPlayingMovies = createAsyncThunk('movies/fetchNowPlaying', 
     const response = await getNowPlayingMovies();
     return response.results;
 })
-export const fetchMovieDetails = createAsyncThunk('movies/movieDetails', async(movieId) =>{
+export const fetchMovieDetails = createAsyncThunk('movies/movieDetails', async(movieId) => {
     const response = await getMovieDetails(movieId);
     return response;
 })
-export const fetchMovieSimilar = createAsyncThunk('movie/movieSimilar', async(movieId) =>{
+export const fetchMovieSimilar = createAsyncThunk('movie/movieSimilar', async(movieId) => {
     const response = await getMovieSimilar(movieId);
     return response.results;
 })
-export const fetchMovieVideos = createAsyncThunk('movie/movieVideos', async(movieId) =>{
+export const fetchMovieVideos = createAsyncThunk('movie/movieVideos', async(movieId) => {
     const response = await getMovieVideos(movieId);
     return response.results;
 })
-
 export const moviesSlice = createSlice({
     name: 'movies',
     initialState: {
@@ -36,7 +35,7 @@ export const moviesSlice = createSlice({
         backgroundMovie: [],
         movieDetails: [],
         movieSimilar: [],
-        movieVideos:[],
+        movieVideos: []
     },
     reducers: {
         setBackgroundMovie: (state, action) => {
@@ -44,7 +43,12 @@ export const moviesSlice = createSlice({
         }
     },
     extraReducers: builder => {
-        builder.addCase(fetchPopularMovies.fulfilled, (state, action) => {
+        builder
+       
+        .addCase(fetchPopularMovies.pending, (state, action) => {
+            state.loading = true;
+        })
+        .addCase(fetchPopularMovies.fulfilled, (state, action) => {
             state.loading = false;
             state.popular = action.payload;
         }).addCase(fetchUpcomingMovies.fulfilled, (state, action) => {
@@ -53,20 +57,16 @@ export const moviesSlice = createSlice({
         }).addCase(fetchNowPlayingMovies.fulfilled, (state, action) => {
             state.loading = false;
             state.nowPlaying = action.payload;
-        })
-        .addCase(fetchMovieDetails.pending, (state, action) =>{
+        }).addCase(fetchMovieDetails.pending, (state, action) => {
             state.loading = true;
-        })
-        .addCase(fetchMovieDetails.fulfilled, (state, action) =>{
+        }).addCase(fetchMovieDetails.fulfilled, (state, action) => {
             state.movieDetails = action.payload;
             state.loading = false;
-        })
-        .addCase(fetchMovieSimilar.fulfilled, (state, action) =>{
+        }).addCase(fetchMovieSimilar.fulfilled, (state, action) => {
             state.movieSimilar = action.payload;
             state.loading = false;
-        })
-        .addCase(fetchMovieVideos.fulfilled, (state, action) =>{
-            state.movieVideos = action.payload; 
+        }).addCase(fetchMovieVideos.fulfilled, (state, action) => {
+            state.movieVideos = action.payload;
             state.loading = false;
         })
     }
