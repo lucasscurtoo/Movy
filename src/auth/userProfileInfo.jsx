@@ -10,7 +10,6 @@ const Profile = () => {
         <div className="w-25 h-full flex  items-center">
           <img className="w-8 rounded-2xl" src={user.picture} alt={user.name} />
           <h2 className="mx-2">Profile</h2>
-        
         </div>
       )
     );
