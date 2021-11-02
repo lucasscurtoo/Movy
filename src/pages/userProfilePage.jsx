@@ -5,6 +5,7 @@ import MovyLogo from '../images/Movy-logo.png'
 function userProfile() {
     const {user, isAuthenticated} = useAuth0();
 
+    
     console.log(user)
     return (isAuthenticated && (
         <div className="w-screen h-screen bg-black text-white">
