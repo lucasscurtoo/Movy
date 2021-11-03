@@ -44,7 +44,6 @@ export const moviesSlice = createSlice({
     },
     extraReducers: builder => {
         builder
-       
         .addCase(fetchPopularMovies.pending, (state, action) => {
             state.loading = true;
         })

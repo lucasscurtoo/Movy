@@ -17,6 +17,7 @@ function MoviePage() {
     const movieVideos = useSelector(state => state.movies.movieVideos)
     const dispatch = useDispatch();
 
+
     useEffect(() => {
         dispatch(fetchMovieDetails(id))
         dispatch(fetchMovieSimilar(id))
