@@ -1,6 +1,9 @@
 import React from 'react';
 import {useAuth0} from "@auth0/auth0-react";
 import MovyLogo from '../images/Movy-logo.png'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 function userProfile() {
     const {user, isAuthenticated} = useAuth0();
@@ -9,7 +12,10 @@ function userProfile() {
     console.log(user)
     return (isAuthenticated && (
         <div className="w-screen h-screen bg-black text-white">
-            <div className="w-full h-20">
+            <div className="w-full h-20 flex items-center">
+                <Link to="/home">
+                   <FontAwesomeIcon icon={faArrowLeft} size="2x" className="white-to-gray mt-10 ml-8" />
+                </Link>
                 <img className="w-20 ml-20 pt-10" src={MovyLogo}></img>
             </div>
             <div className="w-9/12 m-auto mt-20 h-3/6">
