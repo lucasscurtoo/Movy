@@ -3,11 +3,9 @@ import { IMAGE_URL } from '../api/movies';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router-dom';
 
 const MovieSimilar = ({ data }) => {
-const history = useHistory();
+
     return (
         <>
             <a href={`/movie/${data.id}`}>

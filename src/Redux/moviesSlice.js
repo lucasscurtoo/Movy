@@ -17,6 +17,10 @@ export const fetchMovieDetails = createAsyncThunk('movies/movieDetails', async(m
     const response = await getMovieDetails(movieId);
     return response;
 })
+export const fetchMoviePageDetails = createAsyncThunk('movies/moviePageDetails', async(movieId) => {
+    const response = await getMovieDetails(movieId);
+    return response;
+})
 export const fetchMovieSimilar = createAsyncThunk('movie/movieSimilar', async(movieId) => {
     const response = await getMovieSimilar(movieId);
     return response.results;
@@ -34,6 +38,7 @@ export const moviesSlice = createSlice({
         nowPlaying: [],
         backgroundMovie: [],
         movieDetails: [],
+        moviePageDetails: [],
         movieSimilar: [],
         movieVideos: []
     },
@@ -61,6 +66,9 @@ export const moviesSlice = createSlice({
             state.loading = true;
         }).addCase(fetchMovieDetails.fulfilled, (state, action) => {
             state.movieDetails = action.payload;
+            state.loading = false;
+        }).addCase(fetchMoviePageDetails.fulfilled, (state,action) =>{
+            state.moviePageDetails = action.payload;
             state.loading = false;
         }).addCase(fetchMovieSimilar.fulfilled, (state, action) => {
             state.movieSimilar = action.payload;

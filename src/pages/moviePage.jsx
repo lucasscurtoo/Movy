@@ -1,29 +1,29 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
-import { IMAGE_URL,Youtube_URL } from '../api/movies';
+import { IMAGE_URL, YOUTUBE_URL } from '../api/movies';
 import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faPlay, faPlus, faThumbsUp, faThumbsDown, faVolumeMute, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
-import { fetchMovieDetails, fetchMovieSimilar, fetchMovieVideos } from '../Redux/moviesSlice';
+import { fetchMoviePageDetails, fetchMovieSimilar, fetchMovieVideos } from '../Redux/moviesSlice';
 import MovieSimilarCarousel from '../components/movieSimilarCarousel';
 
 
 function MoviePage() {
     let { id } = useParams();
 
-    const movieDetails = useSelector((state) => state.movies.movieDetails)
+    const moviePageDetails = useSelector((state) => state.movies.moviePageDetails)
     const movieSimilar = useSelector(state => state.movies.movieSimilar)
     const movieVideos = useSelector(state => state.movies.movieVideos)
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchMovieDetails(id))
+        dispatch(fetchMoviePageDetails(id))
         dispatch(fetchMovieSimilar(id))
         dispatch(fetchMovieVideos(id))
     }, [])
      
-const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1` 
+const trailer = `${YOUTUBE_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1` 
 
     return (
         <>
@@ -36,7 +36,7 @@ const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1`
                             </Link>
                         </div>
                         <div className="w-11/12 h-2/5 text-white flex flex-col justify-center">
-                            <h1 className="text-4xl font-bold ">{movieDetails?.title}</h1>
+                            <h1 className="text-4xl font-bold ">{moviePageDetails?.title}</h1>
                             <div className="flex flex-row mt-6 items-center ">
                                 <button className="py-2 px-10 bg-white text-black font-xs font-bold rounded-lg w-max hover:bg-gray-200 flex items-center">
                                     <FontAwesomeIcon icon={faPlay} size="2x" />
@@ -53,19 +53,19 @@ const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1`
                 <div className="w-screen h-60 bgGray text-white">
                     <div className="w-11/12 h-full mx-auto flex ">
                         <section className="w-3/6 mt-4">
-                            <p className="text-blue-500 font-bold inline text-3xl">{movieDetails?.release_date?.slice(0, 4)}</p>
-                            <p className="text-blue-500 font-bold inline pl-6 text-3xl">{`${movieDetails?.runtime} m`}</p>
-                            <p className="text-xl h-full overflow-clip overflow-hidden">{movieDetails?.overview}</p>
+                            <p className="text-blue-500 font-bold inline text-3xl">{moviePageDetails?.release_date?.slice(0, 4)}</p>
+                            <p className="text-blue-500 font-bold inline pl-6 text-3xl">{`${moviePageDetails?.runtime} m`}</p>
+                            <p className="text-xl h-full overflow-clip overflow-hidden">{moviePageDetails?.overview}</p>
                         </section>
                         <section className="w-3/6 mt-4">
                             <ul className="text-xl ">
                                 <li className="inline text-gray-400 mr-2">Cast:</li>
-                                <li className="inline">{movieDetails?.credits?.cast.slice(0, 3)?.map((item) => `${item.name}, `)}</li>
+                                <li className="inline">{moviePageDetails?.credits?.cast.slice(0, 3)?.map((item) => `${item.name}, `)}</li>
                                 <a href="#cast">more</a>
                             </ul>
                             <ul className="text-xl pt-6">
                                 <li className="inline text-gray-400 mr-2">Genres:</li>
-                                <li className="inline">{movieDetails?.genres?.map((item) => ` ${item.name}, `)}</li>
+                                <li className="inline">{moviePageDetails?.genres?.map((item) => ` ${item.name}, `)}</li>
                                 <li className="inline"> more</li>
                             </ul>
                         </section>
@@ -79,18 +79,18 @@ const trailer = `${Youtube_URL}${movieVideos[0]?.key}?controls=0?&autoplay=1`
                     </div>
                     <div className="w-screen h-64 text-white mt-10">
                         <div className="w-11/12 h-full mx-auto  ">
-                            <h1 className="text-3xl">Acerca de <strong>{movieDetails?.title}</strong></h1>
+                            <h1 className="text-3xl">Acerca de <strong>{moviePageDetails?.title}</strong></h1>
                             <ul className="text-xl mt-4" id="cast">
                                 <li className="inline text-gray-400 mr-2">Cast:</li>
-                                <li className="inline">{movieDetails?.credits?.cast.slice(0,6).map((item) => `${item.name}, `)}</li>
+                                <li className="inline">{moviePageDetails?.credits?.cast.slice(0,6).map((item) => `${item.name}, `)}</li>
                             </ul>
                             <ul className="text-xl mt-2">
                                 <li className="inline text-gray-400 mr-2">Crew:</li>
-                                <li className="inline">{movieDetails?.credits?.crew.slice(0,6).map((item) => `${item.name}, `)}</li>
+                                <li className="inline">{moviePageDetails?.credits?.crew.slice(0,6).map((item) => `${item.name}, `)}</li>
                             </ul>
                             <ul className="text-xl mt-2">
                                 <li className="inline text-gray-400 mr-2">Genres:</li>
-                                <li className="inline">{movieDetails?.genres?.map((item) => `${item.name}, `)}</li>
+                                <li className="inline">{moviePageDetails?.genres?.map((item) => `${item.name}, `)}</li>
                             </ul>
                         </div>   
                     </div> 

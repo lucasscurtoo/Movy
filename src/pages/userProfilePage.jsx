@@ -8,9 +8,8 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 function userProfile() {
     const {user, isAuthenticated} = useAuth0();
 
-    
-    console.log(user)
-    return (isAuthenticated && (
+    return (
+        isAuthenticated && (
         <div className="w-screen h-screen bg-black text-white">
             <div className="w-full h-20 flex items-center">
                 <Link to="/home">
