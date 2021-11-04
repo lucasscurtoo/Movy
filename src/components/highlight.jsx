@@ -12,8 +12,8 @@ const Highlight = ({
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchMovieDetails(movie.id))
-    }, [movie]);
+            dispatch(fetchMovieDetails(movie.id))
+    }, []);
 
     return (
         <>

@@ -1,7 +1,7 @@
 const API_KEY = '35ae0ab849a7893db02cf33f003e017f';
 const BASE_URL = 'https://api.themoviedb.org/3';
 export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500/';
-export const Youtube_URL = 'https://www.youtube.com/watch?v='
+export const  YOUTUBE_URL = "https://www.youtube.com/embed/"
 
 export const getPopularMovies = () => (
   fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`)
